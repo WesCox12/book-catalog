@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Books</h1>
+
+    {% for book in books %}
+        <h2>{{ book.title }}</h2>
+        <p>Pages: {{ book.page_count }}</p>
+        <p>Publisher: {{ book.publisher.name }}</p>
+        <p>Reviews: {{ book.review_set.count }}</p>
+    {% endfor %}
+{% endblock %}
